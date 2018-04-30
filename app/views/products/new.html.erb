@@ -1,0 +1,12 @@
+Adicione produtos a sua loja!
+<%= form_for @product, html: {multipart: true}  do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field :name%>
+
+    <%= f.label :value%>
+    <%= f.text_field :value%>
+
+    <%= f.hidden_field :store_id, :value => @id %>
+
+    <%= f.submit "Enviar"%>
+<% end %>

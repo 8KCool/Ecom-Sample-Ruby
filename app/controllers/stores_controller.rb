@@ -11,7 +11,7 @@ class StoresController < ApplicationController
     else
       flash[:notice] = 'Não foi possível criar a loja.'
       render :new
-    end 
+    end
   end
 
   def show
