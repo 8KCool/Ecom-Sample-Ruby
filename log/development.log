@@ -88,3 +88,41 @@ FOREIGN KEY ("store_id")
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "store_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "product1"], ["value", 2.2], ["store_id", 1], ["created_at", "2018-04-30 17:00:50.046160"], ["updated_at", "2018-04-30 17:00:50.046160"]]
   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" ORDER BY "stores"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSloganToStore (20180430174039)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "stores" ADD "slogan" varchar[0m
+  ↳ db/migrate/20180430174039_add_slogan_to_store.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180430174039"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-04-30 14:44:26 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/gersonnascimento/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:1
+  Rendered products/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 397ms (Views: 374.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stores/new" for 127.0.0.1 at 2018-04-30 14:54:22 -0300
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/new.html.erb within layouts/application (98.3ms)
+Completed 200 OK in 159ms (Views: 145.1ms | ActiveRecord: 0.7ms)
+
+
