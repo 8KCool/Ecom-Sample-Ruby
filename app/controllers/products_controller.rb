@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params.require(:product).permit(:name, :value, :store_id))
+    @product = Product.new(params.require(:product).permit(:name, :value,:description ,:store_id))
     if @product.save
       flash[:notice] = 'Produto adicionado com sucesso!'
       redirect_to @product
