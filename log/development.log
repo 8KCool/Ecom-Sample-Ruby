@@ -2389,3 +2389,40 @@ Processing by StoresController#show as HTML
 Completed 200 OK in 121ms (Views: 111.5ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 15:10:05 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 98ms (Views: 93.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 15:10:42 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 80ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 15:11:50 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 96ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 15:12:18 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 222ms (Views: 217.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 15:12:31 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
