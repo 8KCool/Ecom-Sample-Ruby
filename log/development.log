@@ -1798,3 +1798,594 @@ Processing by StoresController#show as HTML
 Completed 200 OK in 95ms (Views: 88.8ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:50:18 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:50:20 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 94ms (Views: 88.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:50:21 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 90ms (Views: 83.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:50:22 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 114ms (Views: 109.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:50:22 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:50:24 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 90ms (Views: 85.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:50:24 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:50:56 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 83ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:51:31 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:51:53 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:51:54 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 102ms (Views: 98.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:52:04 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 97ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:52:44 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:52:47 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 93ms (Views: 88.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:52:49 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:52:51 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 105ms (Views: 100.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-08 13:52:53 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:21
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 1]]
+  ↳ app/views/stores/show.html.erb:4
+  Rendered stores/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 93ms (Views: 83.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:53:00 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:53:06 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 92ms (Views: 87.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:53:28 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:53:30 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 94ms (Views: 90.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:53:31 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 97ms (Views: 91.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:53:32 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 96ms (Views: 91.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:54:48 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:54:49 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 99.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:54:50 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 94ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:54:51 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 106ms (Views: 101.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:54:52 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:54:52 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 99ms (Views: 94.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:54:54 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:54:55 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 91ms (Views: 86.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:54:56 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:54:58 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 101ms (Views: 97.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:55:51 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 98ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:56:13 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 119ms (Views: 112.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:56:13 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 102ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:56:14 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 110ms (Views: 105.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Create (0.5ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan") VALUES (?, ?, ?, ?)[0m  [["name", "Marabraz"], ["created_at", "2018-05-08 16:58:01.259514"], ["updated_at", "2018-05-08 16:58:01.259514"], ["slogan", "Preço menor, ninguém faz"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Create (0.5ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan") VALUES (?, ?, ?, ?)[0m  [["name", "Netshoes"], ["created_at", "2018-05-08 16:58:15.302811"], ["updated_at", "2018-05-08 16:58:15.302811"], ["slogan", "Preço menor, ninguém faz"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:58:52 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 107ms (Views: 91.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/2" for 127.0.0.1 at 2018-05-08 13:59:01 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:21
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 2]]
+  ↳ app/views/stores/show.html.erb:4
+  Rendered stores/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 91ms (Views: 84.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/2/products/new" for 127.0.0.1 at 2018-05-08 13:59:03 -0300
+Processing by ProductsController#new as HTML
+  Parameters: {"id"=>"2"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 136ms (Views: 132.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Create (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan") VALUES (?, ?, ?, ?)[0m  [["name", "Casas Bahia"], ["created_at", "2018-05-08 16:59:40.365248"], ["updated_at", "2018-05-08 16:59:40.365248"], ["slogan", "Preço menor, ninguém faz"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 13:59:44 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 101ms (Views: 94.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 14:00:04 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 116ms (Views: 113.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 14:00:07 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 109ms (Views: 103.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 14:57:25 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 14:57:26 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 107ms (Views: 102.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-08 14:57:27 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:21
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 1]]
+  ↳ app/views/stores/show.html.erb:4
+  Rendered stores/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 103ms (Views: 94.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2018-05-08 14:57:29 -0300
+Processing by ProductsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 95ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-05-08 14:57:45 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZAytwRCYzWnR7t+pjD4m9OooD8evQ+ThhoCOSODN8VZ4lijuYlqFc5m/C6TcUrck8jmAvKP0l/WCMv4TB9VvPA==", "product"=>{"name"=>"Doritos ", "description"=>"Salgadinho Nacho", "value"=>"23", "store_id"=>"1"}, "commit"=>"Enviar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:13
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "store_id", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doritos "], ["value", 23.0], ["store_id", 1], ["created_at", "2018-05-08 17:57:45.156203"], ["updated_at", "2018-05-08 17:57:45.156203"], ["description", "Salgadinho Nacho"]]
+  ↳ app/controllers/products_controller.rb:13
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:13
+Redirected to http://localhost:3000/products/6
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2018-05-08 14:57:45 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:22
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 78.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 14:57:49 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 88ms (Views: 84.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-08 14:57:50 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:21
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 1]]
+  ↳ app/views/stores/show.html.erb:4
+  Rendered stores/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 103ms (Views: 97.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 14:57:55 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 109ms (Views: 103.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 14:59:46 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/new" for 127.0.0.1 at 2018-05-08 14:59:51 -0300
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 87ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores" for 127.0.0.1 at 2018-05-08 15:00:02 -0300
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MYiUDJav4BxxG0WjCokO6VHD3YggyY0LXuwf5SC0hvJBjlxdXKyGt3sGS6CXy1qQjdQ/n6/SH1CnlRHYfCupdA==", "store"=>{"name"=>"Ferraz", "slogan"=>"Vasconcelos"}, "commit"=>"Enviar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/stores_controller.rb:11
+  [1m[36mStore Create (1.4ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan") VALUES (?, ?, ?, ?)[0m  [["name", "Ferraz"], ["created_at", "2018-05-08 18:00:02.262599"], ["updated_at", "2018-05-08 18:00:02.262599"], ["slogan", "Vasconcelos"]]
+  ↳ app/controllers/stores_controller.rb:11
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/stores_controller.rb:11
+Redirected to http://localhost:3000/stores/5
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/stores/5" for 127.0.0.1 at 2018-05-08 15:00:02 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:21
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 5]]
+  ↳ app/views/stores/show.html.erb:4
+  Rendered stores/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 86ms (Views: 79.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 15:00:04 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/5" for 127.0.0.1 at 2018-05-08 15:00:06 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:21
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 5]]
+  ↳ app/views/stores/show.html.erb:4
+  Rendered stores/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 105ms (Views: 98.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 15:00:11 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 68ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 15:00:32 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 97ms (Views: 92.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 15:02:31 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  Rendered stores/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/gersonnascimento/workspace/Ecommerce/app/views/stores/index.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+r Loja", new_store_path class: "btn btn-primary");@output_bu
+                              ^):
+  
+app/views/stores/index.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 15:02:44 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 93ms (Views: 90.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 15:04:25 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 108ms (Views: 104.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 15:04:36 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores" for 127.0.0.1 at 2018-05-08 15:07:40 -0300
+Processing by StoresController#index as HTML
+  Rendering stores/index.html.erb within layouts/application
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  ↳ app/views/stores/index.html.erb:1
+  Rendered stores/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 112ms (Views: 106.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-08 15:07:41 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/stores_controller.rb:21
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 1]]
+  ↳ app/views/stores/show.html.erb:4
+  Rendered stores/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 121ms (Views: 111.5ms | ActiveRecord: 1.5ms)
+
+

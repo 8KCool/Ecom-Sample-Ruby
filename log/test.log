@@ -2892,3 +2892,88 @@ Processing by StoresController#show as HTML
   Rendered stores/show.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
   [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.5ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan") VALUES (?, ?, ?, ?)[0m  [["name", "store test"], ["created_at", "2018-05-08 18:09:25.262583"], ["updated_at", "2018-05-08 18:09:25.262583"], ["slogan", "better, better, better"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by ProductsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 261ms (Views: 241.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.6ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan") VALUES (?, ?, ?, ?)[0m  [["name", "store test"], ["created_at", "2018-05-08 18:09:25.546010"], ["updated_at", "2018-05-08 18:09:25.546010"], ["slogan", "better, better, better"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by ProductsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/products" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"name"=>"Camiseta", "description"=>"Camiseta da hora", "value"=>"12", "store_id"=>"1"}, "commit"=>"Enviar"}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "store_id", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Camiseta"], ["value", 12.0], ["store_id", 1], ["created_at", "2018-05-08 18:09:25.586912"], ["updated_at", "2018-05-08 18:09:25.586912"], ["description", "Camiseta da hora"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products/1
+Completed 302 Found in 16ms (ActiveRecord: 1.0ms)
+Started GET "/products/1" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/stores/new" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/stores/new" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/stores" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "store"=>{"name"=>"Besni", "slogan"=>"Dedicação total a você"}, "commit"=>"Enviar"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan") VALUES (?, ?, ?, ?)[0m  [["name", "Besni"], ["created_at", "2018-05-08 18:09:25.651299"], ["updated_at", "2018-05-08 18:09:25.651299"], ["slogan", "Dedicação total a você"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/stores/1
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 1]]
+  Rendered stores/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "store1"], ["created_at", "2018-05-08 18:09:25.673298"], ["updated_at", "2018-05-08 18:09:25.673298"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "store_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "product1"], ["value", 2.2], ["store_id", 1], ["created_at", "2018-05-08 18:09:25.674947"], ["updated_at", "2018-05-08 18:09:25.674947"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-08 15:09:25 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 1]]
+  Rendered stores/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m

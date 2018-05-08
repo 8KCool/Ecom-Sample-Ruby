@@ -1,3 +1,5 @@
 <% @stores.each do |store| %>
-  <%=link_to store.name, store_path(store)%>
+  <h2><%=link_to store.name, store_path(store), class: "btn btn-warning"%><h2>
 <% end %>
+<h2><%=link_to "Criar Loja", new_store_path ,class: "btn btn-primary"%><h2>
+
