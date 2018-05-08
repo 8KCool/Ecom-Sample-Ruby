@@ -1,4 +1,10 @@
 <%= @store.name %>
-<%= @store.slogan %>
+| <%= @store.slogan %><br>
+
+<% @products.each do |product| %>
+  <%= product.name %>
+  <%= product.value %><br>
+<% end %>
+
 <%= link_to 'Adicionar Produto', "/stores/#{@store.id}/products/new" %>
 
