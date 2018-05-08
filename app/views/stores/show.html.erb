@@ -1,10 +1,29 @@
-<%= @store.name %>
-| <%= @store.slogan %><br>
+<div class="container">
+  <div class="text-center">
+    <h1><%= @store.name %></h1>
+    <p><%= @store.slogan %></p>
 
-<% @products.each do |product| %>
-  <%= product.name %>
-  <%= product.value %><br>
-<% end %>
+    <% if !@products.empty? %>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Produto</th>
+          <th scope="col">Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.name %></td>
+            <td>R$ <%= product.value %></td>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>Nenhum produto cadastrado!</p>
+  <% end %>
 
-<%= link_to 'Adicionar Produto', "/stores/#{@store.id}/products/new" %>
+        <%= link_to 'Adicionar Produto', "/stores/#{@store.id}/products/new" %>
+  </div>
+</div>
 
