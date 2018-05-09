@@ -14,11 +14,13 @@ feature 'Customer admin products' do
     fill_in 'Name', with: 'Camiseta'
     fill_in 'Value', with: '12'
     fill_in 'Description', with: 'Camiseta da hora'
+    fill_in 'Quantity', with: '10'
     click_on 'Enviar'
 
     expect(page).to have_content('Produto adicionado com sucesso!')
     expect(page).to have_content('Camiseta')
     expect(page).to have_content('Camiseta da hora')
     expect(page).to have_content('12')
+    expect(page).to have_content('10')
   end
 end
