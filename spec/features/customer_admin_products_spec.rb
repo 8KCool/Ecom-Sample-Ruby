@@ -2,13 +2,18 @@ require 'rails_helper'
 
 feature 'Customer admin products' do
   scenario 'Visiting new product page' do
-    store = Store.create(name: 'store test', slogan:'better, better, better')
+    customer = Customer.create(email: 'teste@teste.com', password: '123456')
+    store = Store.create(name: 'store test', slogan:'better, better, better',
+                         customer: customer)
     visit "/stores/#{store.id}/products/new"
     expect(page).to have_content("Adicione produtos a sua loja!")
   end
 
   scenario 'creating a new product' do
-    store = Store.create(name: 'store test', slogan:'better, better, better')
+    customer = Customer.create(email: 'teste@teste.com', password: '123456')
+    store = Store.create(name: 'store test', slogan:'better, better, better',
+                         customer: customer)
+    puts "store id: #{store.id}"
     visit "/stores/#{store.id}/products/new"
 
     fill_in 'Name', with: 'Camiseta'

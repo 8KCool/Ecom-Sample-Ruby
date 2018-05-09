@@ -9,6 +9,7 @@ class StoresController < ApplicationController
 
   def create
     @store = Store.new(params.require(:store).permit(:name, :slogan))
+    @store.customer = current_customer
     if @store.save
       flash[:notice] = 'Loja criada com sucesso!'
       redirect_to @store
