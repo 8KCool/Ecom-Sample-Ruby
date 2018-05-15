@@ -13,7 +13,6 @@ feature 'Customer admin products' do
     customer = Customer.create(email: 'teste@teste.com', password: '123456')
     store = Store.create(name: 'store test', slogan:'better, better, better',
                          customer: customer)
-    puts "store id: #{store.id}"
     visit "/stores/#{store.id}/products/new"
 
     fill_in 'Name', with: 'Camiseta'

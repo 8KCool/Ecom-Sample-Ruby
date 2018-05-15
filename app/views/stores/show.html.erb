@@ -8,6 +8,7 @@
       <thead class="thead-dark">
         <tr>
           <th scope="col">Produto</th>
+          <th scope="col">Quantidade</th>
           <th scope="col">Valor</th>
         </tr>
       </thead>
@@ -15,7 +16,9 @@
         <% @products.each do |product| %>
           <tr>
             <td><%= link_to product.name, product_path(product) %></td>
+            <td><%= product.quantity %>
             <td>R$ <%= product.value %></td>
+            
           </tr>
         <% end %>
       </tbody>
