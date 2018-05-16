@@ -4,30 +4,35 @@
     <p><%= @store.slogan %></p>
 
     <% if !@products.empty? %>
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Produto</th>
-          <th scope="col">Quantidade</th>
-          <th scope="col">Valor</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @products.each do |product| %>
+      <table class="table">
+        <thead class="thead-dark">
           <tr>
-            <td><%= link_to product.name, product_path(product) %></td>
-            <td><%= product.quantity %>
-            <td>R$ <%= product.value %></td>
-            
+            <th scope="col">Produto</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Valor</th>
+            <% if !current_customer.owner?(@store) %>
+              <th scope="col"> </th>
+            <% end %>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <% else %>
-    <p>Nenhum produto cadastrado!</p>
-  <% end %>
+        </thead>
+        <tbody>
+          <% @products.each do |product| %>
+            <tr>
+              <td><%= link_to product.name, product_path(product) %></td>
+              <td><%= product.quantity %>
+              <td>R$ <%= product.value %></td>
+              <% if !current_customer.owner?(@store) %>
+                <td><%= link_to 'Comprar', root_path, class: "btn btn-primary" %> </td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <p>Nenhum produto cadastrado!</p>
+    <% end %>
 
-        <%= link_to 'Adicionar Produto', "/stores/#{@store.id}/products/new" %>
+    <%= link_to 'Adicionar Produto', "/stores/#{@store.id}/products/new" %>
   </div>
 </div>
 
