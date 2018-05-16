@@ -21,6 +21,9 @@
           <li class="nav-item">
             <%= link_to 'Início', root_path, class: "nav-link"%>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= allstores_path%>">Lojas</a>
+          </li>
           <% if customer_signed_in? %>
           <li class="nav-item">
             <a class="nav-link" href="<%=stores_path%>">Minhas Lojas</a>

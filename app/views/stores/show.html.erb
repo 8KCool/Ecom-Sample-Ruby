@@ -10,7 +10,7 @@
             <th scope="col">Produto</th>
             <th scope="col">Quantidade</th>
             <th scope="col">Valor</th>
-            <% if !current_customer.owner?(@store) %>
+            <% if current_customer && !current_customer.owner?(@store) || !current_customer%>
               <th scope="col"> </th>
             <% end %>
           </tr>
@@ -21,7 +21,7 @@
               <td><%= link_to product.name, product_path(product) %></td>
               <td><%= product.quantity %>
               <td>R$ <%= product.value %></td>
-              <% if !current_customer.owner?(@store) %>
+            <% if current_customer && !current_customer.owner?(@store) || !current_customer%>
                 <td><%= link_to 'Comprar', root_path, class: "btn btn-primary" %> </td>
               <% end %>
             </tr>
