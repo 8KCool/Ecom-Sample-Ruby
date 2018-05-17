@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/stores/:id/products/new', to: "products#new"
   resources :stores, only: [:index, :new, :create, :show]
   resources :products, only: [:show, :create]
+  post '/products/:id/buy', to: "products#buy"
 
 end
