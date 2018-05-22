@@ -21,8 +21,7 @@
               <td><%= link_to product.name, product_path(product) %></td>
               <td><%= product.quantity %>
               <td>R$ <%= product.value %></td>
-              <td><%= product.price_with_a %></td>
-            <% if current_customer && !current_customer.owner?(@store) || !current_customer%>
+              <% if current_customer && !current_customer.owner?(@store) || !current_customer%>
                 <td><%= link_to 'Comprar', product_path(product), class: "btn btn-primary" %> </td>
               <% end %>
             </tr>
