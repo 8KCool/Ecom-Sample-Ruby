@@ -1,0 +1,196 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "customers"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_customers_on_email" ON "customers" ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_customers_on_reset_password_token" ON "customers" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "value" decimal, "store_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" text, "quantity" integer, "minimum_quantity" integer)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_products_on_store_id" ON "products" ("store_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "shopping_carts"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "shopping_carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "payed" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "stores"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "stores" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slogan" varchar, "customer_id" integer)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_stores_on_customer_id" ON "stores" ("customer_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180522002356)[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180430163246),
+(20180430164749),
+(20180430174039),
+(20180503165755),
+(20180503171801),
+(20180509134024),
+(20180509143519),
+(20180514171309);
+
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-05-22 00:31:35.842301"], ["updated_at", "2018-05-22 00:31:35.842301"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "teste@teste.com"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "teste@teste.com"], ["encrypted_password", "$2a$04$YtTC5Bz4RQRGPZnZ3CxiOe03TdWfwzhUABUH335xlKncUPA4GxCjO"], ["created_at", "2018-05-22 00:31:35.925951"], ["updated_at", "2018-05-22 00:31:35.925951"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan", "customer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "store test"], ["created_at", "2018-05-22 00:31:35.951675"], ["updated_at", "2018-05-22 00:31:35.951675"], ["slogan", "better, better, better"], ["customer_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2018-05-21 21:31:35 -0300
+Processing by ProductsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (168.1ms)
+Completed 200 OK in 438ms (Views: 399.0ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "teste@teste.com"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "teste@teste.com"], ["encrypted_password", "$2a$04$n0dedfXWog8mrfTj1Hagg.4bgFfh1lZxsMxqH7WnfZ0GFVeWE8fda"], ["created_at", "2018-05-22 00:31:36.425214"], ["updated_at", "2018-05-22 00:31:36.425214"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan", "customer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "store test"], ["created_at", "2018-05-22 00:31:36.428507"], ["updated_at", "2018-05-22 00:31:36.428507"], ["slogan", "better, better, better"], ["customer_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/stores/1/products/new" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by ProductsController#new as HTML
+  Parameters: {"id"=>"1"}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+Started POST "/products" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"name"=>"Camiseta", "description"=>"Camiseta da hora", "quantity"=>"10", "value"=>"12", "store_id"=>"1"}, "commit"=>"Enviar"}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "store_id", "created_at", "updated_at", "description", "quantity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Camiseta"], ["value", 12.0], ["store_id", 1], ["created_at", "2018-05-22 00:31:36.470885"], ["updated_at", "2018-05-22 00:31:36.470885"], ["description", "Camiseta da hora"], ["quantity", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products/1
+Completed 302 Found in 12ms (ActiveRecord: 1.0ms)
+Started GET "/products/1" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/stores/new" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "teste@teste.com"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "teste@teste.com"], ["encrypted_password", "$2a$04$z4moHAbBGgi1P2EekYaGR.dOh39bvPkUyD/P6n/TNyce4HtRjRQZ6"], ["created_at", "2018-05-22 00:31:36.543554"], ["updated_at", "2018-05-22 00:31:36.543554"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/customers/sign_in" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/gersonnascimento/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/gersonnascimento/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (2.7ms)
+  Rendered /Users/gersonnascimento/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+Started POST "/customers/sign_in" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "customer"=>{"email"=>"teste@teste.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "teste@teste.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Update (0.3ms)[0m  [1m[33mUPDATE "customers" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["current_sign_in_at", "2018-05-22 00:31:36.630746"], ["last_sign_in_at", "2018-05-22 00:31:36.630746"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-05-22 00:31:36.631831"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 38ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+Started GET "/stores/new" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by StoresController#new as HTML
+  Rendering stores/new.html.erb within layouts/application
+  Rendered stores/new.html.erb within layouts/application (1.6ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+Started POST "/stores" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by StoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "store"=>{"name"=>"Besni", "slogan"=>"Dedicação total a você"}, "commit"=>"Enviar"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "slogan", "customer_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Besni"], ["created_at", "2018-05-22 00:31:36.700870"], ["updated_at", "2018-05-22 00:31:36.700870"], ["slogan", "Dedicação total a você"], ["customer_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/stores/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."store_id" = ? LIMIT ?[0m  [["store_id", 1], ["LIMIT", 1]]
+  Rendered stores/show.html.erb within layouts/application (2.5ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "teste@teste.com"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "teste@teste.com"], ["encrypted_password", "$2a$04$H2CnDqKasFMtbZyh5X65lOjWntgKzCQSfsIH9JfRITmQLFP0Xs8sm"], ["created_at", "2018-05-22 00:31:36.729083"], ["updated_at", "2018-05-22 00:31:36.729083"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "teste2@teste.com"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "teste2@teste.com"], ["encrypted_password", "$2a$04$TUUQDZ1WtqWb6GBmr88nmO9mxdvx7qYU5JfRpEaKElYsu79THsCUu"], ["created_at", "2018-05-22 00:31:36.733238"], ["updated_at", "2018-05-22 00:31:36.733238"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "teste@teste.com"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "teste@teste.com"], ["encrypted_password", "$2a$04$zS1rMlT59kZCmJCRTi.rgu9HfhXp0zUUFMaCs3emorwhRBQli0M1y"], ["created_at", "2018-05-22 00:31:36.743662"], ["updated_at", "2018-05-22 00:31:36.743662"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (1.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "customer_id") VALUES (?, ?, ?, ?)[0m  [["name", "store1"], ["created_at", "2018-05-22 00:31:36.746709"], ["updated_at", "2018-05-22 00:31:36.746709"], ["customer_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "store_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "product1"], ["value", 2.2], ["store_id", 1], ["created_at", "2018-05-22 00:31:36.750632"], ["updated_at", "2018-05-22 00:31:36.750632"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/stores/1" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."store_id" = ? LIMIT ?[0m  [["store_id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."store_id" = ?[0m  [["store_id", 1]]
+  Rendered stores/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "teste@teste.com"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "teste@teste.com"], ["encrypted_password", "$2a$04$QZeCQc2RVUoy1LaROd0qPel2yC0BzmkNPEA0cmtPERFe9giA8th1a"], ["created_at", "2018-05-22 00:31:36.782847"], ["updated_at", "2018-05-22 00:31:36.782847"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "customer_id") VALUES (?, ?, ?, ?)[0m  [["name", "store1"], ["created_at", "2018-05-22 00:31:36.786233"], ["updated_at", "2018-05-22 00:31:36.786233"], ["customer_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mStore Create (0.1ms)[0m  [1m[32mINSERT INTO "stores" ("name", "created_at", "updated_at", "customer_id") VALUES (?, ?, ?, ?)[0m  [["name", "store2"], ["created_at", "2018-05-22 00:31:36.790192"], ["updated_at", "2018-05-22 00:31:36.790192"], ["customer_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "value", "store_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "product1"], ["value", 2.2], ["store_id", 1], ["created_at", "2018-05-22 00:31:36.791829"], ["updated_at", "2018-05-22 00:31:36.791829"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/stores/2" for 127.0.0.1 at 2018-05-21 21:31:36 -0300
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering stores/show.html.erb within layouts/application
+  [1m[36mProduct Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."store_id" = ? LIMIT ?[0m  [["store_id", 2], ["LIMIT", 1]]
+  Rendered stores/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
